@@ -95,20 +95,15 @@
                     {
                         linkTitle: 'Shop DC Collectibles',
                     },
-                ]
+                ],
             }
-        }   
+        }
     }
 </script>
 
-<!-- <ul>
-    <li class="d-flex flex-column" v-for="(link,index) in linksComics" :key="index">
-        <a class="pt-1 link-color" :href="link.href">{{ link.title }}</a>
-    </li>
-</ul> -->
-
 <template>
     <footer class="large-container">
+        <!-- Footer Top -->
         <div class="footer-top">
             <div class="container">
                 <img src="../assets/img/dc-logo-bg.png" alt="">
@@ -150,8 +145,32 @@
             </div>
             <!-- /Container -->
         </div>
-        <div class="footer-bottom container">
-            <h2>Footer Bottom</h2>
+        <!-- /Footer Top -->
+        <!-- Footer Bottom -->
+        <div class="footer-bottom large-container">
+            <div class="container">
+                <button>
+                    <a href="">SIGN-UP NOW!</a>
+                </button>
+                <div class="follow">
+                    <h4>Follow us</h4>
+                    <div>
+                        <img src="../assets/img/footer-facebook.png" alt="">
+                    </div>
+                    <div>
+                    <img src="../assets/img/footer-twitter.png" alt="">
+                    </div>
+                    <div>
+                        <img src="../assets/img/footer-youtube.png" alt="">
+                    </div>
+                    <div>
+                        <img src="../assets/img/footer-pinterest.png" alt="">
+                    </div>
+                    <div>
+                        <img src="../assets/img/footer-periscope.png" alt="">
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 </template>
@@ -162,14 +181,14 @@
 
 .footer-top {
     background-image: url(../assets/img/footer-bg.jpg);
-    min-height: 400px;
+    min-height: 480px;
 
     .container {
         position: relative;
     }
 
     img {
-        width: 400px;
+        width: 440px;
         position: absolute;
         top: 0;
         right: 0px;
@@ -195,6 +214,17 @@
 }
 
 .footer-bottom {
-    z-index: 999;
+    @include flex();
+    background-color: #303030;
+    min-height: 100px;
+
+    .container {
+        @include flex();
+    }
+    
+    .follow {
+        @include flex();
+        gap: 1rem;
+    }
 }
 </style>
