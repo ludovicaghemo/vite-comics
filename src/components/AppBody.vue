@@ -8,7 +8,7 @@ export default {
 </script>
 
 <template>
-<div class="large-container">
+<div class="container">
     <h2>Content goes here</h2>
 </div>
 </template>

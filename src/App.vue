@@ -1,21 +1,24 @@
 <script>
-//importare AppHeader - AppBody
+//importare AppHeader - AppBody - AppFooter
 import AppHeader from './components/AppHeader.vue';
 import AppBody from './components/AppBody.vue';
+import AppFooter from './components/AppFooter.vue';
 
-//dichiarare AppHeader
+//dichiarare AppHeader - AppBody - AppFooter
 export default {
   components: {
     AppHeader,
     AppBody,
+    AppFooter,
   },
 };
 </script>
 
 <template>
-<!-- utilizzare AppHeader -->
+<!-- utilizzare AppHeader - AppBody - AppFooter-->
 <AppHeader />
 <AppBody />
+<AppFooter />
 </template>
 
 <style lang="scss">
