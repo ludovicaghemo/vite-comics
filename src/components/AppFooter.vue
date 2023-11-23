@@ -96,8 +96,33 @@
                         linkTitle: 'Shop DC Collectibles',
                     },
                 ],
+                footerImg: [
+                    {
+                        img: 'footer-facebook.png',
+                    },
+                    {
+                        img: 'footer-twitter.png',
+                    },
+                    {
+                        img: 'footer-twitter.png',
+                    },
+                    {
+                        img: 'footer-youtube.png',
+                    },
+                    {
+                        img: 'footer-pinterest.png',
+                    },
+                    {
+                        img: 'footer-periscope.png',
+                    },
+                ],
             }
-        }
+        },
+        methods: {
+            getImagePath: function(img) {
+                return new URL(`../assets/img/${img}`, import.meta.url).href;
+            }
+        },
     }
 </script>
 
@@ -154,20 +179,10 @@
                 </button>
                 <div class="follow">
                     <h4>Follow us</h4>
-                    <div>
-                        <img src="../assets/img/footer-facebook.png" alt="">
-                    </div>
-                    <div>
-                    <img src="../assets/img/footer-twitter.png" alt="">
-                    </div>
-                    <div>
-                        <img src="../assets/img/footer-youtube.png" alt="">
-                    </div>
-                    <div>
-                        <img src="../assets/img/footer-pinterest.png" alt="">
-                    </div>
-                    <div>
-                        <img src="../assets/img/footer-periscope.png" alt="">
+                    <div v-for="item in footerImg">
+                        <a href="">
+                            <img :src="getImagePath(item.img)" alt="">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -181,7 +196,7 @@
 
 .footer-top {
     background-image: url(../assets/img/footer-bg.jpg);
-    min-height: 480px;
+    min-height: 420px;
 
     .container {
         position: relative;
