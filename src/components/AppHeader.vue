@@ -41,16 +41,18 @@ export default {
 
 <template>
 <header>
-    <div class="logo">
-      <img src="../assets/img/dc-logo.png" alt="Logo DC Comics" />
+    <div class="large-container">
+        <div class="logo">
+        <img src="../assets/img/dc-logo.png" alt="Logo DC Comics" />
+        </div>
+        <nav>
+        <ul>
+            <li v-for="item in navItems" :key="item.navTitle">
+            <a href="">{{ item.navTitle }}</a>
+            </li>
+        </ul>
+        </nav>
     </div>
-    <nav>
-      <ul>
-        <li v-for="item in navItems" :key="item.navTitle">
-          <a href="">{{ item.navTitle }}</a>
-        </li>
-      </ul>
-    </nav>
   </header>
 </template>
 

@@ -1,11 +1,13 @@
 <script>
-//importare AppHeader
+//importare AppHeader - AppBody
 import AppHeader from './components/AppHeader.vue';
+import AppBody from './components/AppBody.vue';
 
 //dichiarare AppHeader
 export default {
   components: {
     AppHeader,
+    AppBody,
   },
 };
 </script>
@@ -13,6 +15,7 @@ export default {
 <template>
 <!-- utilizzare AppHeader -->
 <AppHeader />
+<AppBody />
 </template>
 
 <style lang="scss">
