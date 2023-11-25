@@ -10,7 +10,7 @@ export default {
 <template>
     <div class="card">
         <img :src="thumb" alt="">
-        <h3>{{ series }}</h3>
+        <p>{{ series }}</p>
     </div>
 </template>
 

@@ -87,14 +87,16 @@ export default {
   <div class="hero">
   </div>
   <div class="container">
-    <h1 class="title">CURRENT SERIES</h1>
+    <div class="current-btn">
+      <a href="">CURRENT SERIES</a>
+    </div>
     <div class="row">
       <div class="col" v-for="(card, index) in cardsArray" :key="index">
         <AppCard :thumb="card.thumb" :series="card.series" />
       </div>
     </div>
-    <div class="button">
-      <a href="">LOAD MORE</a>
+    <div class="load-btn">
+      <a href=""><strong>LOAD MORE</strong></a>
     </div>
   </div>
 </template>
@@ -103,24 +105,56 @@ export default {
 @use "../style/partials/mixin" as *;
 @use "../style/partials/variables" as *;
 
-img {
-  max-width: 100%;
+.container {
+  position: relative;
 }
+
+.current-btn {
+  @include flex();
+  position: absolute;
+  top: -16px;
+  left: 20px;
+
+  a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    background-color: $banner-bg-color;
+    padding: .5rem 1.5rem;
+  }
+}
+
+.load-btn {
+  @include flex();
+  padding-bottom: 2rem;
+  justify-content: center;
+
+  a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    background-color: $banner-bg-color;
+    padding: .5rem 1.5rem;
+  }
+}
+
 .hero {
-    background-image: url('../assets/img/jumbotron.jpg');
-    height: 250px;
-    width: 100%;
-    background-size: cover;
+  background-image: url('../assets/img/jumbotron.jpg');
+  height: 250px;
+  width: 100%;
+  background-size: cover;
 }
 
 .row {
-  @include flex();
-  padding: 3rem;
+  @include flex(row, space-between, wrap);
+  padding: 2rem;
 
   .col {
     width: calc((100% / 6) - 1rem);
     gap: 1rem;
-    padding: 1rem;
+    //padding: 2rem;
   }
 }
 </style>
