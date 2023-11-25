@@ -142,7 +142,7 @@ export default {
 
 .hero {
   background-image: url('../assets/img/jumbotron.jpg');
-  height: 250px;
+  height: 300px;
   width: 100%;
   background-size: cover;
 }
@@ -154,7 +154,6 @@ export default {
   .col {
     width: calc((100% / 6) - 1rem);
     gap: 1rem;
-    //padding: 2rem;
   }
 }
 </style>
