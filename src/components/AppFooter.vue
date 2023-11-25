@@ -174,11 +174,11 @@
         <!-- Footer Bottom -->
         <div class="footer-bottom large-container">
             <div class="container">
-                <button>
+                <div class="sign-up-btn">
                     <a href="">SIGN-UP NOW!</a>
-                </button>
+                </div>
                 <div class="follow">
-                    <h4>Follow us</h4>
+                    <h4><strong>FOLLOW US</strong></h4>
                     <div v-for="item in footerImg">
                         <a href="">
                             <img :src="getImagePath(item.img)" alt="">
@@ -196,16 +196,16 @@
 
 .footer-top {
     background-image: url(../assets/img/footer-bg.jpg);
-    min-height: 420px;
+    min-height: 300px;
 
     .container {
         position: relative;
     }
 
     img {
-        width: 440px;
+        width: 395px;
         position: absolute;
-        top: 0;
+        bottom: -10px;
         right: 0px;
     }
 
@@ -232,16 +232,24 @@
     @include flex();
     background-color: #303030;
     min-height: 100px;
-    //position: fixed;
-    //z-index: 99;
 
     .container {
         @include flex();
+        .sign-up-btn {
+            border: 2px solid $banner-bg-color;
+            padding: 1rem;
+            a {
+                text-align: center;
+                color: white;
+                text-decoration: none;
+            }
+        }
     }
     
     .follow {
         @include flex();
         gap: 1rem;
+        color: $banner-bg-color;
     }
 }
 </style>
