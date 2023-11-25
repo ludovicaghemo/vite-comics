@@ -84,11 +84,13 @@ export default {
 </script>
 
 <template>
+  <div class="hero">
+  </div>
   <div class="container">
     <h1 class="title">CURRENT SERIES</h1>
     <div class="row">
-      <div class="col" v-for="(card, index) in cardsArray" :key="index" >
-        <AppCard :thumb="card.thumb" :series="card.series"/>
+      <div class="col" v-for="(card, index) in cardsArray" :key="index">
+        <AppCard :thumb="card.thumb" :series="card.series" />
       </div>
     </div>
     <div class="button">
@@ -100,19 +102,25 @@ export default {
 <style scoped lang="scss">
 @use "../style/partials/mixin" as *;
 @use "../style/partials/variables" as *;
+
 img {
-    max-width: 100%;
+  max-width: 100%;
+}
+.hero {
+    background-image: url('../assets/img/jumbotron.jpg');
+    height: 250px;
+    width: 100%;
+    background-size: cover;
 }
 
 .row {
-    @include flex();
-    padding: 3rem;
-    .col {
-        width: calc((100% / 6) - 1rem);
-        gap: 1rem;
-        padding: 1rem;
-    }
+  @include flex();
+  padding: 3rem;
+
+  .col {
+    width: calc((100% / 6) - 1rem);
+    gap: 1rem;
+    padding: 1rem;
+  }
 }
-
-
 </style>
