@@ -232,6 +232,8 @@
     @include flex();
     background-color: #303030;
     min-height: 100px;
+    //position: fixed;
+    //z-index: 99;
 
     .container {
         @include flex();
